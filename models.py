@@ -8,7 +8,7 @@ db = PostgresqlExtDatabase('psp', user='osm', password='osm')
 class BaseExtModel(Model):
     class Meta:
         database = db
-        db_schema = 'prewencja'
+        schema = 'prewencja'
 
 class funkcjonariusze(BaseExtModel):
 
