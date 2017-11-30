@@ -1,0 +1,53 @@
+{# templates/edytuj_funkcjonariuszy.html_ #}
+
+{% extends "layout.html" %}
+{% block title %}Funkcjonariusze{% endblock %}
+{% block body %}      <div class="jumbotron">
+        <h2>Dodaj funkcjonariusza</h2>
+        <form method="POST" action="./edytuj_funkcjonariuszy" class="form-inline" role="form">
+        <label for="inputLeg" class="sr-only">Nr legitymacji służbowej</label>
+        <input type="text" name="inputLeg" id="inputLeg" class="form-control" placeholder="Strażak998" max-lenght="10" required autofocus>
+        <label for="inputStopien" class="sr-only">Stopień służbowy</label>
+        <select type="text" class="form-control" name="inputStopien" id="inputstopien">
+          <option>strażak</option>          <option>starszy strażak</option>
+          <option>sekcyjny</option>          <option>starszy sekcyjny</option>
+          <option>młodszy ogniomistrz</option>          <option>ogniomistrz</option>
+          <option>starszy ogniomistrz</option>          <option>młodszy aspirant</option>
+          <option>aspirant</option>          <option>starszy aspirant</option>
+          <option>aspirant sztabowy</option>          <option>młodszy kapitan</option>
+          <option>kapitan</option>          <option>starszy kapitan</option>
+          <option>młodszy brygadier</option>          <option>brygadier</option>
+          <option>starszy brygadier</option>          <option>nadbrygadier</option>
+          <option>generał brygadier</option>
+        </select></br>
+        <label for="inputTytulZawodowy" class="sr-only">Tytuł zawodowy</label>
+        <input type="time" name="inputTytulZawodowy" id="inputTytulZawodowy" class="form-control" required autofocus>
+        <label for="inputNazwisko" class="sr-only">Imię i Nazwisko</label>
+        <input type="text" name="inputNazwisko" id="inputNazwisko" class="form-control" placeholder="Jan Niezbędny" required autofocus>
+        </br>
+        <label for="inputStanowisko" class="sr-only">Stanowisko służbowe</label>
+        <select type="text" class="form-control" name="inputStanowisko" id="inputStanowisko">
+          <option>młodszy specjalista</option>          <option>specjalista</option>
+          <option>starszy specjalista</option>          <option>młodszy inspektor</option>
+          <option>inspektor</option>          <option>starszy inspektor</option>
+          <option>zastępca naczelnika wydziału</option>          <option>naczelnik wydziału/option>
+          <option>zastępca dowódcy JRG</option>          <option>dowódca JRG</option>
+          <option>zastępca dowódcy zmiany</option>          <option>dowódca zmiany</option>
+        </select></br>
+        <button id="btnAddFunkcjonariusz" class="btn btn-success">Dodaj funkcjonariusza</button>
+      </form>
+      </div>
+<div>    <h2>Lista funkcjonariuszy</h2>
+     <table class="table table-striped">
+      {% for funkcjonariusz in funkcjonariusze %}
+     <tr>
+       <td>{{funkcjonariusz.legitymacja}}</td>
+       <td>{{funkcjonariusz.stopien}}</td>
+       <td>{{funkcjonariusz.tytul}}</td>
+       <td>{{funkcjonariusz.nazwisko}}</td>
+       <td>{{funkcjonariusz.stanowisko}}</td>
+     </tr>
+     {%endfor%}
+   </table>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{# templates/layout.html_ #}
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+<meta charset="utf-8" />
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="/#">Strona główna</a>
+                    </li>
+                    <li role="presentation"><a href="obiekty">Obiekty</a>
+                    </li>
+                    <li role="presentation"><a href="kontrola">Protokoły kontrolne</a>
+                    </li>
+                    <li role="presentation"><a href="administracja">Administracja</a>
+                    </li>
+                    <li role="presentation"><img src="/static/psp.png"></img>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Prewentysta</h3>
+        </div>
+    {% block body %}
+    {% endblock %}
+
+  <footer class="footer">
+    <p>&copy; GIS Beskidy 2017</p>
+  </footer></div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{# templates/index.html_ #}
+
+{% extends "layout.html" %}
+{% block title %}Prewentysta{% endblock %}
+
+{% block body %}<div class="jumbotron">
+            <h1>Co masz zamiar robić?</h1>
+            <p class="lead"></p>
+            <p><a class="btn btn-lg btn-success" href="obiekty" role="button">Obiekty</a>
+            </p>
+            <p><a class="btn btn-lg btn-success" href="kontrola" role="button">Kontrola</a>
+            </p>
+            <p><a class="btn btn-lg btn-success" href="administracja" role="button">Administracja</a>
+            </p>
+        </div>
+
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>Prewentysta</h4>
+                <p>Tworzenie, edycja, przeglądanie protokołów kontrolnych. Lista i przeglądanie obiektów kontrolowanych wraz z informacją o zbiorach danych dostępnych</p>
+            </div>
+        </div>{% endblock %}
